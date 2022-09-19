@@ -88,7 +88,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Row(
                         children: [
                           CircleAvatar(
-                            backgroundColor: Colors.grey,
+                            backgroundColor: Colors.black,
                             backgroundImage: NetworkImage(
                               userData['photoUrl'],
                             ),
@@ -103,9 +103,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    buildStatColumn(postLen, "posts"),
-                                    buildStatColumn(followers, "followers"),
-                                    buildStatColumn(following, "following"),
+                                    buildStatColumn(postLen, "Publicaciones"),
+                                    buildStatColumn(followers, "Seguidores"),
+                                    buildStatColumn(following, "Siguiendo"),
                                   ],
                                 ),
                                 Row(
@@ -115,7 +115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     FirebaseAuth.instance.currentUser!.uid ==
                                             widget.uid
                                         ? FollowButton(
-                                            text: 'Sign Out',
+                                            text: 'Cerrar sesion',
                                             backgroundColor:
                                                 mobileBackgroundColor,
                                             textColor: primaryColor,
@@ -133,7 +133,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           )
                                         : isFollowing
                                             ? FollowButton(
-                                                text: 'Unfollow',
+                                                text: 'Dejar de seguir',
                                                 backgroundColor: Colors.white,
                                                 textColor: Colors.black,
                                                 borderColor: Colors.grey,
@@ -152,7 +152,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 },
                                               )
                                             : FollowButton(
-                                                text: 'Follow',
+                                                text: 'Seguir',
                                                 backgroundColor: Colors.blue,
                                                 textColor: Colors.white,
                                                 borderColor: Colors.blue,

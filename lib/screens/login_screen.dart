@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 64,
               ),
               TextFieldInput(
-                hintText: 'Enter your email',
+                hintText: 'Introduce tu correo electrónico',
                 textInputType: TextInputType.emailAddress,
                 textEditingController: _emailController,
               ),
@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 24,
               ),
               TextFieldInput(
-                hintText: 'Enter your password',
+                hintText: 'Ingresa tu contraseña',
                 textInputType: TextInputType.text,
                 textEditingController: _passwordController,
                 isPass: true,
@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Container(
                   child: !_isLoading
                       ? const Text(
-                          'Log in',
+                          'Iniciar sesión',
                         )
                       : const CircularProgressIndicator(
                           color: primaryColor,
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Container(
                     child: const Text(
-                      'Dont have an account?',
+                      '¿No tienes una cuenta?',
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 8),
                   ),
@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: Container(
                       child: const Text(
-                        ' Signup.',
+                        ' Registrarse.',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),

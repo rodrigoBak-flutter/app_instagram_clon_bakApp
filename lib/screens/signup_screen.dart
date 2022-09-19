@@ -112,9 +112,10 @@ class _SignupScreenState extends State<SignupScreen> {
                         )
                       : const CircleAvatar(
                           radius: 64,
-                          backgroundImage: NetworkImage(
-                              'https://i.stack.imgur.com/l60Hf.png'),
-                          backgroundColor: Colors.red,
+                          backgroundImage: AssetImage(
+                            "assets/person.png",
+                          ),
+                          // backgroundColor: Colors.red,
                         ),
                   Positioned(
                     bottom: -10,
@@ -130,7 +131,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 24,
               ),
               TextFieldInput(
-                hintText: 'Enter your username',
+                hintText: 'Ingrese su nombre de usuario',
                 textInputType: TextInputType.text,
                 textEditingController: _usernameController,
               ),
@@ -138,7 +139,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 24,
               ),
               TextFieldInput(
-                hintText: 'Enter your email',
+                hintText: 'Ingrese su email',
                 textInputType: TextInputType.emailAddress,
                 textEditingController: _emailController,
               ),
@@ -146,7 +147,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 24,
               ),
               TextFieldInput(
-                hintText: 'Enter your password',
+                hintText: 'Ingrese su contraseña',
                 textInputType: TextInputType.text,
                 textEditingController: _passwordController,
                 isPass: true,
@@ -155,7 +156,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 24,
               ),
               TextFieldInput(
-                hintText: 'Enter your bio',
+                hintText: 'Ingresa tu biografía',
                 textInputType: TextInputType.text,
                 textEditingController: _bioController,
               ),
@@ -166,7 +167,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Container(
                   child: !_isLoading
                       ? const Text(
-                          'Sign up',
+                          'Registrarte',
                         )
                       : const CircularProgressIndicator(
                           color: primaryColor,
@@ -195,7 +196,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 children: [
                   Container(
                     child: const Text(
-                      'Already have an account?',
+                      '¿Ya tienes una cuenta?',
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 8),
                   ),
@@ -207,7 +208,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                     child: Container(
                       child: const Text(
-                        ' Login.',
+                        ' Ingreso.',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),

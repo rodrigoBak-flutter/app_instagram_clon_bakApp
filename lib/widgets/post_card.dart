@@ -124,7 +124,7 @@ class _PostCardState extends State<PostCard> {
                                         vertical: 16),
                                     shrinkWrap: true,
                                     children: [
-                                      'Delete',
+                                      'Elimina publicacion',
                                     ]
                                         .map(
                                           (e) => InkWell(
@@ -261,7 +261,7 @@ class _PostCardState extends State<PostCard> {
                         .subtitle2!
                         .copyWith(fontWeight: FontWeight.w800),
                     child: Text(
-                      '${widget.snap['likes'].length} likes',
+                      '${widget.snap['likes'].length} me gusta',
                       style: Theme.of(context).textTheme.bodyText2,
                     )),
                 Container(
@@ -289,7 +289,7 @@ class _PostCardState extends State<PostCard> {
                 InkWell(
                   child: Container(
                     child: Text(
-                      'View all $commentLen comments',
+                      'Ver $commentLen comentarios',
                       style: const TextStyle(
                         fontSize: 16,
                         color: secondaryColor,
